@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>bmi</title>
-  </head>
-  <body>
-    <h1>BMI calculator</h1>
-    <label for="gewicht">gewicht:</label>
-    <input type="text" id="gewicht" value="80">
-    <label for="lengte">lengte in cm:</label>
-    <input type="text" id="lengte" value="100">
-    <input type="button" id="bereken" value ="compute BMI">
-    <div id="resultaat">hier komt de bmi</div>
-    <script type="text/javascript" src="ajax.js"></script>
-    <script>
-        let lengte = document.getElementById('lengte');//bind aan JS
-        let gewicht = document.getElementById('gewicht');//bind aan JS
-        let bereken = document.getElementById('bereken');//bind aan JS
-        bereken.addEventListener("click", function(){
-           ajax(gewicht.value, lengte.value);
-        });//call ajax
-    </script>
 
-  </body>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <title>bmi</title>
+</head>
+
+<body>
+  <h1>BMI calculator</h1>
+  <div class="wrapper">
+    <label for="gewicht" id="gewicht_label">gewicht in kg:</label><br>
+    <input type="text" id="gewicht" placeholder="bijv. 64"><br>
+    <label for="lengte">lengte in cm:</label><br>
+    <input type="text" id="lengte" placeholder="bijv. 183"><br>
+    <input type="button" id="bereken" value="compute BMI">
+    <div id="resultaat">hier komt de bmi</div>
+    <img src="https://thumbs.dreamstime.com/b/man-body-mass-index-vector-fitness-bmi-chart-male-silhouettes-scale-man-body-mass-index-vector-fitness-bmi-chart-104744769.jpg">
+  </div>
+  <script type="text/javascript" src="ajax.js"></script>
+  <script>
+    let lengte = document.getElementById('lengte'); //bind aan JS
+    let gewicht = document.getElementById('gewicht'); //bind aan JS
+    let bereken = document.getElementById('bereken'); //bind aan JS
+    bereken.addEventListener("click", function() {
+      ajax(gewicht.value, lengte.value);
+    }); //call ajax
+  </script>
+
+</body>
+
 </html>
