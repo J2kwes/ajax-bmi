@@ -1,0 +1,26 @@
+body {
+  text-align: center;
+  background-image: url("http://www.brightonyourhealth.com/wp-content/uploads/2013/09/weight-scale.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.wrapper {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: auto;
+  width: 75%;
+  padding: 2em;
+  color: white;
+}
+
+label {
+  margin-left: -77px;
+}
+
+#gewicht_label {
+  margin-left: -70px;
+}
+
+input {
+  margin: 1em;
+}
