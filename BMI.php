@@ -13,4 +13,30 @@ function BMIcalc($gewicht, $lengte) {
   //afronden
   $bmi = round($bmi, 1);
   echo "Uw BMI is: $bmi.<br>";
+
+  switch ($bmi) {
+  case ($bmi<18.5):
+    echo "U bent ondergewicht";
+    break;
+
+  case ($bmi>18.5)&&($bmi<25):
+    echo "U heeft een normaal gewicht voor uw lengte";
+    break;
+
+  case ($bmi>=25.0)&&($bmi<29.9):
+    echo "U bent een beetje overgewicht";
+    break;
+
+  case ($bmi>=30.0)&&($bmi<34.9):
+    echo "U bent nu Obese CLass 1";
+    break;
+
+  case ($bmi>=35.0)&&($bmi<39.9):
+    echo "U bent nu Obese Class 2";
+    break;
+
+  case ($bmi>=40.0):
+    echo "U bent nu Obese Class 3";
+    break;
+}
 }
