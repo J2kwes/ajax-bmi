@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>bmi</title>
+  </head>
+  <body>
+    <h1>BMI calculator</h1>
+    <label for="gewicht">gewicht:</label>
+    <input type="text" id="gewicht" value="80">
+    <label for="lengte">lengte in cm:</label>
+    <input type="text" id="lengte" value="100">
+    <input type="button" id="bereken" value ="compute BMI">
+    <div id="resultaat">hier komt de bmi</div>
+    <script type="text/javascript" src="ajax.js"></script>
+    <script>
+        let lengte = document.getElementById('lengte');//bind aan JS
+        let gewicht = document.getElementById('gewicht');//bind aan JS
+        let bereken = document.getElementById('bereken');//bind aan JS
+        bereken.addEventListener("click", function(){
+           ajax(gewicht.value, lengte.value);
+        });//call ajax
+    </script>
+
+  </body>
+</html>
